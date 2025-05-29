@@ -25,13 +25,18 @@ your workplaces is one of those rare entities that want to filter on
 rsync style lists for filtering on disk.
 """
 
+import sys
+import io
+
+# Set default encoding to UTF-8
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 import argparse
 import configparser as ConfigParser
 import logging
 import os
 import pathlib
 import sqlite3
-import sys
 import time
 
 from .denylist_template import denylist_template
