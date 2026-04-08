@@ -52,6 +52,20 @@ abstractions in general so the utility is less like a monolith and more like
 a configurable static analysis engine analogous to something you might work
 with in Python or Golang.
 
+### Troubleshooting
+
+#### Encoding
+
+If there are any problems running this script with UTF-8 characters you may need
+to configure your environment differently. Windows is most likely to raise
+issues. If so you can change your codepage and default encoding with:
+
+```sh
+chcp 65001
+set PYTHONIOENCODING=utf-8
+```
+
+
 ## More information
 
 See the following blogs for more information:
